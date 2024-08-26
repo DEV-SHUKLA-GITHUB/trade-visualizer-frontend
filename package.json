@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@canvasjs/react-stockcharts": "^1.0.2",
+    "axios": "^1.7.5",
     "chart.js": "^4.4.3",
     "d3": "^7.9.0",
     "html2canvas": "^1.4.1",
@@ -20,6 +21,7 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.1",
+    "react-select": "^5.8.0",
     "react-stockcharts": "^0.7.8"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image from "../assets/home.jpg"
+import bg from "../assets/Home.mp4";
 const Home = () => {
   return (
     <div className="container mx-auto px-4 py-20">
@@ -19,12 +19,17 @@ const Home = () => {
         </Link>
       </div>
       <div className="mt-16 flex justify-center">
-        <img
-          src={image}
-          alt="Trade Visualizer"
-          className="w-full max-w-4xl rounded-lg shadow-lg animate-fade-in"
-        />
-      </div>
+  <video
+    autoPlay
+    loop
+    muted
+    className="w-full max-w-4xl rounded-lg shadow-lg animate-fade-in"
+  >
+    <source src={bg} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
     </div>
   );
 };

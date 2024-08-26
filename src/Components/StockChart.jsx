@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from "react";
 import CanvasJSReact from '@canvasjs/react-stockcharts';
-import { data }from "../data";
+// import data from "../data.json";
+// import oldData from '../newestjson.json'
+import {fetchDataAndTransform} from "../convert";
 const CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
-const StockChart = () => {
+const StockChart = ({plotData}) => {
   const [positiveDataPoints, setPositiveDataPoints] = useState([]);
   const [negativeDataPoints, setNegativeDataPoints] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    const data = fetchDataAndTransform(plotData)
     const positivePoints = [];
     const negativePoints = [];
-
-    Object.keys(data).forEach((key, index, array) => {
-      const value = parseFloat(data[key].toFixed(2));
+// console.log(tempdata,"data")
+    Object.keys(data.MTM).forEach((key, index, array) => {
+      const value = parseFloat(data.MTM[key].toFixed(2));
       const currentPoint = { x: new Date(key), y: value };
 
       if (value >= 0) {
@@ -26,7 +29,7 @@ const StockChart = () => {
 
       // Interpolation at transition points for smooth transitions
       if (index > 0) {
-        const prevValue = parseFloat(data[array[index - 1]].toFixed(2));
+        const prevValue = parseFloat(data.MTM[array[index - 1]].toFixed(2));
         if ((prevValue >= 0 && value < 0) || (prevValue < 0 && value >= 0)) {
           const zeroPoint = { 
             x: new Date(key),
