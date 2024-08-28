@@ -1,7 +1,6 @@
+
 import React, { useState, useEffect } from "react";
 import CanvasJSReact from '@canvasjs/react-stockcharts';
-// import data from "../data.json";
-// import oldData from '../newestjson.json'
 import {fetchDataAndTransform} from "../convert";
 const CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
@@ -14,7 +13,6 @@ const StockChart = ({plotData}) => {
     const data = fetchDataAndTransform(plotData)
     const positivePoints = [];
     const negativePoints = [];
-// console.log(tempdata,"data")
     Object.keys(data.MTM).forEach((key, index, array) => {
       const value = parseFloat(data.MTM[key].toFixed(2));
       const currentPoint = { x: new Date(key), y: value };

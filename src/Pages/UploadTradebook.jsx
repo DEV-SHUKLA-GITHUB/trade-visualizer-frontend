@@ -62,7 +62,7 @@ setTimeout(() => {
         formData.append('file', file); 
 
         try {
-          const response = await axios.post('https://trade-visualizer-backend.onrender.com/calculate_mtm', formData)
+          const response = await axios.post('http://127.0.0.1:5000/calculate_mtm', formData)
           // Navigate to the dashboard and pass the response data
           console.log(response.data,"response")
           navigate('/dashboard', { state: { tableData: formattedData, plotData: response.data } });

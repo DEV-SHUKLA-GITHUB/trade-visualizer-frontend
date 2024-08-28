@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import StockChart from '../Components/StockChart';
+import StockChart from '../Components/StockChart.jsx';
 import data from '../data.json';
 import { GoDownload } from "react-icons/go";
 import { IoIosShareAlt } from "react-icons/io";
@@ -83,8 +83,8 @@ const Dashboard = () => {
           <tbody>
             {tableData.map((trade, index) => (
               <tr key={index}>
-                <td className="py-2 text-center px-4 border-b">{trade.Time.slice(0,9)}</td>
-                <td className="py-2 text-center px-4 border-b">{trade.Time.slice(10,15)}</td>
+                <td className="py-2 text-center px-4 border-b">{trade.Time.slice(0,10)}</td>
+                <td className="py-2 text-center px-4 border-b">{trade.Time.slice(10,17)}</td>
                 <td className="py-2 text-center px-4 border-b">{trade.Type}</td>
                 <td className="py-2 text-center px-4 border-b">{trade.symbol}</td>
                 <td className="py-2 text-center px-4 border-b">{trade.Qty}</td>
