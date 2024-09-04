@@ -29,6 +29,14 @@
    ```bash
    npm run dev
    ```
+## 📷 Screenshots
+
+| Feature       | Screenshot |
+| ------------- | ----------- |
+| **HomePage** | ![HomePage](./src/assets/screen1.png) |
+| **About Page**       | ![About Page](./src/assets/screen2.png) |
+| **Upload Page**  | ![Upload Page](./src/assets/screen3.png) |
+| **Dashboard**  | ![Dashboard](./src/assets/screen4.png) |
 ## Made with ❤️ by Dev
 
 
