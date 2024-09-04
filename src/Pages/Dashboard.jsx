@@ -27,21 +27,21 @@ const Dashboard = () => {
     <div className="flex mx-6 justify-between">
       <div className="flex space-x-10">
         <div className="flex flex-col">
-          <span>MTM</span>
+          <span className='text-xl'>MTM</span>
           <span className={`text-2xl font-semibold ${data.minimum_mtm >= 0 ? 'text-green-500' : 'text-red-500'}`}>
             ₹ {data.minimum_mtm}
           </span>
         </div>
 
         <div className="flex flex-col">
-          <span>Minimum</span>
+          <span className='text-xl'>Minimum</span>
           <span className={`text-2xl font-semibold ${data.min_mtm >= 0 ? 'text-green-500' : 'text-red-500'}`}>
             ₹ {data.minimum_mtm}
           </span>
         </div>
 
         <div className="flex flex-col">
-          <span>Maximum</span>
+          <span className='text-xl'>Maximum</span>
           <span className={`text-2xl font-semibold ${data.max_mtm >= 0 ? 'text-green-500' : 'text-red-500'}`}>
             ₹ {data.maximum_mtm}
           </span>
@@ -61,7 +61,7 @@ const Dashboard = () => {
       Charges<span className="pt-2 text-2xl">₹ {data.charges} </span>
     </div>
     <div className="border flex flex-col rounded-xl m-4 p-6 mt-0 bg-white shadow-lg">
-      <span className="pb-2">What If</span> In Progress
+      <span className="pb-2 text-xl">Additional Features</span> Comming Soon
     </div>
   </div>
 </div>
