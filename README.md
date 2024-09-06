@@ -19,7 +19,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/trade-visualizer.git
+   git clone https://github.com/DEV-SHUKLA-GITHUB/trade-visualizer.git
    ```
 2. **Install Dependencies**:
    ```bash
